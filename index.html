@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thalapathy Vijay - Forever Fan Boy Tribute</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --thalapathy-yellow: #FFD700;
+            --thalapathy-black: #111111;
+            --thalapathy-red: #FF0000;
+            --thalapathy-blue: #00008B;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--thalapathy-black);
+            color: white;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7)), url('vj_main.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--thalapathy-yellow), transparent 70%);
+            opacity: 0.1;
+            top: 10%;
+            left: 10%;
+            border-radius: 50%;
+            animation: float 8s infinite ease-in-out;
+        }
+
+        .header::after {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, var(--thalapathy-red), transparent 70%);
+            opacity: 0.1;
+            bottom: 10%;
+            right: 10%;
+            border-radius: 50%;
+            animation: float 10s infinite ease-in-out reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .title {
+            font-size: 5rem;
+            margin-bottom: 10px;
+            color: var(--thalapathy-yellow);
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+            letter-spacing: 3px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .title span {
+            color: white;
+            font-size: 3.5rem;
+            display: block;
+        }
+
+        .tagline {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--thalapathy-yellow);
+            position: relative;
+            z-index: 2;
+        }
+
+        .quote {
+            font-size: 1.5rem;
+            font-style: italic;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            border-left: 5px solid var(--thalapathy-yellow);
+            background-color: rgba(255, 215, 0, 0.1);
+            position: relative;
+            z-index: 2;
+        }
+
+        .pulse {
+            display: inline-block;
+            animation: pulse 2s infinite;
+            color: var(--thalapathy-red);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--thalapathy-yellow);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 5px;
+            background-color: var(--thalapathy-yellow);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            font-size: 1.2rem;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 10px;
+            border-top: 5px solid var(--thalapathy-yellow);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+        }
+
+        .vijay-image {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.5s;
+        }
+
+        .vijay-image:hover {
+            transform: scale(1.05);
+        }
+
+        .vijay-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Avatar Grid */
+        .avatar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .avatar-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            padding-bottom: 20px;
+            border: 2px solid transparent;
+        }
+
+        .avatar-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.2);
+            border-color: var(--thalapathy-yellow);
+        }
+
+        .avatar-icon {
+            font-size: 3rem;
+            color: var(--thalapathy-yellow);
+            margin: 20px 0;
+        }
+
+        .avatar-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--thalapathy-yellow);
+        }
+
+        /* Movies Section */
+        .movies-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px 0;
+            scrollbar-width: thin;
+            scrollbar-color: var(--thalapathy-yellow) var(--thalapathy-black);
+        }
+
+        .movies-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .movies-container::-webkit-scrollbar-track {
+            background: var(--thalapathy-black);
+        }
+
+        .movies-container::-webkit-scrollbar-thumb {
+            background-color: var(--thalapathy-yellow);
+            border-radius: 20px;
+        }
+
+        .movie-card {
+            min-width: 250px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .movie-card:hover {
+            transform: scale(1.05);
+        }
+
+        .movie-poster {
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .movie-poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .movie-info {
+            padding: 15px;
+        }
+
+        .movie-title {
+            font-size: 1.3rem;
+            color: var(--thalapathy-yellow);
+            margin-bottom: 5px;
+        }
+
+        .movie-year {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Fan Zone */
+        .fan-zone {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 215, 0, 0.05);
+            border-radius: 15px;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fan-zone::before {
+            content: "❤️";
+            position: absolute;
+            font-size: 200px;
+            opacity: 0.05;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .fan-message {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .heartbeat {
+            font-size: 4rem;
+            color: var(--thalapathy-red);
+            margin-bottom: 20px;
+            animation: heartbeat 1.5s infinite;
+            position: relative;
+            z-index: 2;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-top: 5px solid var(--thalapathy-yellow);
+            margin-top: 40px;
+        }
+
+        .footer h3 {
+            color: var(--thalapathy-yellow);
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(255, 215, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--thalapathy-yellow);
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background-color: var(--thalapathy-yellow);
+            color: var(--thalapathy-black);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 3rem;
+            }
+            
+            .title span {
+                font-size: 2.5rem;
+            }
+            
+            .tagline {
+                font-size: 1.3rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <h1 class="title">THALAPATHY <span>VIJAY</span></h1>
+        <p class="tagline">The Heartbeat of Millions ❤️</p>
+        <p class="quote">"Actors come and go, but legends live forever."</p>
+        <div class="heartbeat">
+            <i class="fas fa-heart"></i>
+        </div>
+        <p class="fan-message">Forever a Vijay Fan Boy <span class="pulse">😎💛</span></p>
+    </header>
+
+    <!-- About Section -->
+    <section class="container">
+        <h2 class="section-title">An Emotion, A Movement, A Mass Phenomenon</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Thalapathy Vijay is not just an actor… He is an emotion, a movement, a mass phenomenon.</p>
+                <p>From the moment he appears on screen, theatres turn into festivals 🎉. Whistles, claps, goosebumps — that's the power of Vijay Anna.</p>
+                <p>Off screen, he is humble. He avoids publicity. He helps silently. He inspires millions to stay simple, disciplined, and kind. That's what makes him special.</p>
+                <p>No matter what critics say, no matter what trends change, Thalapathy Vijay will always rule our hearts. We don't just watch his movies — We celebrate them 💥</p>
+            </div>
+            <div class="vijay-image">
+                <img src="vj_side.jpg" alt="Thalapathy Vijay">
+            </div>
+        </div>
+    </section>
+
+    <!-- Avatar Section -->
+    <section class="container">
+        <h2 class="section-title">The Many Shades of Thalapathy</h2>
+        <div class="avatar-grid">
+            <div class="avatar-card">
+                <div class="avatar-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3 class="avatar-title">A Lover Boy 💖</h3>
+                <p>Romancing the screen with his charming smile and heartfelt performances.</p>
+            </div>
+            <div class="avatar-card">
+                <div class="avatar-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="avatar-title">A Class Hero 🎓</h3>
+                <p>Inspiring youth with roles that blend style with substance and intellect.</p>
+            </div>
+            <div class="avatar-card">
+                <div class="avatar-icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <h3 class="avatar-title">A Mass Leader 👑</h3>
+                <p>Commanding the screen with powerful screen presence and mass appeal.</p>
+            </div>
+            <div class="avatar-card">
+                <div class="avatar-icon">
+                    <i class="fas fa-theater-masks"></i>
+                </div>
+                <h3 class="avatar-title">A Silent Performer 🎭</h3>
+                <p>Delivering powerful performances through subtle expressions and intense acting.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Movies Section -->
+    <section class="container">
+        <h2 class="section-title">Iconic Movies & Memorable Characters</h2>
+        <div class="movies-container">
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <img src="ghilli.jpg" alt="Ghilli">
+                </div>
+                <div class="movie-info">
+                    <h4 class="movie-title">Ghilli</h4>
+                    <p class="movie-year">2004</p>
+                </div>
+            </div>
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <img src="thuppakki.jpg" alt="Thuppakki">
+                </div>
+                <div class="movie-info">
+                    <h4 class="movie-title">Thuppakki</h4>
+                    <p class="movie-year">2012</p>
+                </div>
+            </div>
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <img src="jilla.jpg" alt="Jilla">
+                </div>
+                <div class="movie-info">
+                    <h4 class="movie-title">Jilla</h4>
+                    <p class="movie-year">2014</p>
+                </div>
+            </div>
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <img src="kaththi.jpg" alt="Kaththi">
+                </div>
+                <div class="movie-info">
+                    <h4 class="movie-title">Kaththi</h4>
+                    <p class="movie-year">2014</p>
+                </div>
+            </div>
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <img src="theri.jpg" alt="Theri">
+                </div>
+                <div class="movie-info">
+                    <h4 class="movie-title">Theri</h4>
+                    <p class="movie-year">2016</p>
+                </div>
+            </div>            
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <img src="mersal.jpg" alt="Mersal">
+                </div>
+                <div class="movie-info">
+                    <h4 class="movie-title">Mersal</h4>
+                    <p class="movie-year">2017</p>
+                </div>
+            </div>
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <img src="master.jpg" alt="Master">
+                </div>
+                <div class="movie-info">
+                    <h4 class="movie-title">Master</h4>
+                    <p class="movie-year">2021</p>
+                </div>
+            </div>
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <img src="leo.jpg" alt="Leo">
+                </div>
+                <div class="movie-info">
+                    <h4 class="movie-title">Leo</h4>
+                    <p class="movie-year">2023</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fan Zone -->
+    <section class="container">
+        <div class="fan-zone">
+            <h2 class="section-title">Fan Boy Forever Zone</h2>
+            <div class="heartbeat">
+                <i class="fas fa-heart"></i>
+            </div>
+            <p class="fan-message">His style creates trends. His dialogues become slogans. His dance sets the screen on fire 🔥. His eyes speak louder than words.</p>
+            <p class="fan-message">One Man. One Name. One Love. <span class="pulse">THALAPATHY 🔥</span></p>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fas fa-hashtag"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h3>#ThalapathyVijay #ThalapathyForever</h3>
+        <p>ALWAYS MY THALAPATHY</p>
+        <div class="social-icons">
+            <div class="social-icon">
+                <i class="fas fa-fire"></i>
+            </div>
+            <div class="social-icon">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="social-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+            <div class="social-icon">
+                <i class="fas fa-crown"></i>
+            </div>
+        </div>
+        
+    </footer>
+
+    <script>
+        // Interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add floating effect to movie cards
+            const movieCards = document.querySelectorAll('.movie-card');
+            movieCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.zIndex = '10';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.zIndex = '1';
+                });
+            });
+            
+            // Add click effect to avatar cards
+            const avatarCards = document.querySelectorAll('.avatar-card');
+            avatarCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    // Remove active class from all cards
+                    avatarCards.forEach(c => c.classList.remove('active'));
+                    // Add active class to clicked card
+                    this.classList.add('active');
+                    
+                    // Change color temporarily
+                    this.style.backgroundColor = 'rgba(255, 215, 0, 0.1)';
+                    setTimeout(() => {
+                        this.style.backgroundColor = '';
+                    }, 500);
+                });
+            });
+            
+            // Add floating particles effect
+            const header = document.querySelector('.header');
+            for (let i = 0; i < 20; i++) {
+                createParticle(header);
+            }
+            
+            function createParticle(container) {
+                const particle = document.createElement('div');
+                particle.style.position = 'absolute';
+                particle.style.width = Math.random() * 10 + 5 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.background = Math.random() > 0.5 ? 'var(--thalapathy-yellow)' : 'var(--thalapathy-red)';
+                particle.style.borderRadius = '50%';
+                particle.style.opacity = '0.3';
+                particle.style.top = Math.random() * 100 + 'vh';
+                particle.style.left = Math.random() * 100 + 'vw';
+                
+                container.appendChild(particle);
+                
+                // Animate particle
+                animateParticle(particle);
+            }
+            
+            function animateParticle(element) {
+                let x = Math.random() * 100;
+                let y = Math.random() * 100;
+                let xDirection = Math.random() > 0.5 ? 1 : -1;
+                let yDirection = Math.random() > 0.5 ? 1 : -1;
+                
+                function move() {
+                    x += 0.05 * xDirection;
+                    y += 0.05 * yDirection;
+                    
+                    if (x >= 100 || x <= 0) xDirection *= -1;
+                    if (y >= 100 || y <= 0) yDirection *= -1;
+                    
+                    element.style.left = x + 'vw';
+                    element.style.top = y + 'vh';
+                    
+                    requestAnimationFrame(move);
+                }
+                
+                move();
+            }
+            
+            // Add scroll effect to header
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('.header');
+                const scrolled = window.pageYOffset;
+                const rate = scrolled * 0.5;
+                
+                header.style.transform = `translate3d(0px, ${rate}px, 0px)`;
+            });
+            
+            // Add celebration effect on click
+            document.body.addEventListener('click', function(e) {
+                // Create celebration element
+                const celebration = document.createElement('div');
+                celebration.innerHTML = '❤️';
+                celebration.style.position = 'fixed';
+                celebration.style.fontSize = '2rem';
+                celebration.style.left = e.clientX + 'px';
+                celebration.style.top = e.clientY + 'px';
+                celebration.style.pointerEvents = 'none';
+                celebration.style.zIndex = '1000';
+                celebration.style.animation = 'pulse 0.5s ease-out forwards';
+                
+                document.body.appendChild(celebration);
+                
+                // Remove after animation
+                setTimeout(() => {
+                    celebration.remove();
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>
